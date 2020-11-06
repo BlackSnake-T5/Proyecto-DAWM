@@ -17,4 +17,6 @@ BlackSnake
 
 ## Enlace a la plantilla de Bootstrap
 * https://www.templateonweb.com/demo/a97da629b098b75c294dffdc3e463904
-(Insertemos un screenshot)
+![](Plantilla/readmeimages/captura1.png)
+![](Plantilla/readmeimages/captura2.png)
+![](Plantilla/readmeimages/captura3.png)
