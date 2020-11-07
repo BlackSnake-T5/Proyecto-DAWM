@@ -18,5 +18,10 @@ Prototipo: https://marvelapp.com/prototype/6d36862
 
 ## Enlace a la plantilla de Bootstrap
 * Blog (Principal): https://startbootstrap.com/previews/clean-blog
+![](Plantilla/readmeimages/captura1.png)
+
 * Frontpage: https://startbootstrap.com/previews/business-frontpage
+![](Plantilla/readmeimages/captura2.png)
+
 * Vista de múltiples recetas: https://startbootstrap.com/previews/shop-homepage
+![](Plantilla/readmeimages/captura3.png)
