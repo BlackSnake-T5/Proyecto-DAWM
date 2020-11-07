@@ -1,4 +1,5 @@
 # Proyecto-DAWM
+Nombre del proyecto pendiente
 
 ## Nombre del grupo
 BlackSnake
@@ -13,10 +14,9 @@ BlackSnake
 {{Nombre del proyeccto en pendiente}} es una plataforma que permite a cualquier usuario leer recetas compartidas por ciertos usuarios específicos, con la opción de realizar búsquedas y filtrado en función de lo que busquen para comer. 
 
 ## Enlace al diseño
-(Inserte link al diseño)
+Prototipo: https://marvelapp.com/prototype/6d36862
 
 ## Enlace a la plantilla de Bootstrap
-* https://www.templateonweb.com/demo/a97da629b098b75c294dffdc3e463904
-![](Plantilla/readmeimages/captura1.png)
-![](Plantilla/readmeimages/captura2.png)
-![](Plantilla/readmeimages/captura3.png)
+* Blog (Principal): https://startbootstrap.com/previews/clean-blog
+* Frontpage: https://startbootstrap.com/previews/business-frontpage
+* Vista de múltiples recetas: https://startbootstrap.com/previews/shop-homepage
