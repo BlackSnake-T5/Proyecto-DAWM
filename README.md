@@ -34,4 +34,22 @@ El front-end de la página web se trabajó con el framework Angular. Para trabaj
 * Node.js (versión 8.9 o superior)
 * NPM (versión 5.5.1 o superior)
 
-Una vez se tiene 
+### Instalación
+Para instalar Angular se debe ejecutar el siguiente comando
+```
+$ npm install -g @angular/cli
+```
+
+### Inicialización de proyecto
+Una vez clonado el repositorio e instalado Angular, se debe ejecutar el siguiente comando
+```
+$ npm install
+```
+Esto dejará listo el proyecto para trabajar sobre él.
+
+### Probar aplicación
+Para probar la aplicación se debe usar el comando
+```
+$ ng serve [--port ####]
+```
+Esto permite construir la app y colgarla en localhost en el puerto definido (si no se especifica, se usa el puerto 4200, siendo la URL localhost:4200/)
