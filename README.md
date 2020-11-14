@@ -25,3 +25,13 @@ Prototipo: https://marvelapp.com/prototype/6d36862
 
 * Vista de múltiples recetas: https://startbootstrap.com/previews/shop-homepage
 ![](Plantilla/readmeimages/captura3.png)
+
+## Uso de Angular
+El front-end de la página web se trabajó con el framework Angular. Para trabajar en este se deben realizar los siguientes pasos
+
+### Prerrequisitos
+
+* Node.js (versión 8.9 o superior)
+* NPM (versión 5.5.1 o superior)
+
+Una vez se tiene 
