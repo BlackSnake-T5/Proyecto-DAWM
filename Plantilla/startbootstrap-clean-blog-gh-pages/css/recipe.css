@@ -1,0 +1,213 @@
+
+.main-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+  
+}
+.recipe-description-container{
+    display: grid;
+    width: 70%;
+    grid-template-columns: 29% 69%;
+    padding-bottom: 75px;
+    border-bottom: 3px dotted red;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.icon-container img{
+    display: flex;
+    width: 64px;
+    height: 64px;
+}
+
+.recipe-description{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+}
+.recipe-description-content-right{
+    width: 90%;
+}
+
+.description-title{
+    display: flex;
+    font-size: 40px;
+    border-bottom: 1.5px solid red;
+}
+
+    .description-title h2, .description-content p{
+        color: #47525E;
+    }
+.description-content p{
+    font-weight: 500;
+}
+
+.recipe-specs{
+    display: flex;
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    width: 33.33%;
+    flex-direction: column;
+    border-bottom: 1px solid #ccc;
+}
+
+.icon-container{
+    display: flex;
+    height: 70%;
+    width: 100%;
+    justify-content: center;
+}
+
+.content-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-details .title{
+    font-weight: 600;
+    font-size: .75em;
+}
+.content-details span:last-child{
+    font-weight: 500;
+    font-size: .6em;
+}
+
+.content:nth-child(2){
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+.recipe-author span{
+    font-size: 14px;
+    color:#ccc;
+    font-weight: lighter;
+}
+
+
+/*
+    RECIPE STEPS STYLES
+*/
+
+.recipe-steps{
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    color: #47525E;
+    justify-content: center;
+    width: 100%;
+}
+
+.line{
+    border-bottom: 1px solid #47525E;
+}
+
+.steps-container-center{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.steps, .ingredients-list{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+
+.ingredients-list li{
+    border-bottom: 1px solid #47525E ;
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 12px 0;
+}
+
+.step-description{
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.steps-title{
+    font-size: 28px;
+}
+
+.etiquetas{
+    padding-top: 20px;
+}
+
+.lista-etiquetas{
+    display: flex;
+    padding-top: 10px;
+}
+
+
+.lista-etiquetas span{
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #47525E;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+footer{
+    padding-bottom: 0;
+}
+
+.actual-footer{
+    display: flex;
+    width: 100%;
+    background-color: #F95F62;
+    padding: 50px 20px;
+}
+
+.first-half{
+    color:#fff;
+    display: flex;
+}
+
+.nav-options, .other-options{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    font-size: 18px;
+    color: #F7F7F7;
+}
+
+
+.email-form{
+    display: flex;
+}
+.email-form input{
+    display: flex;
+    padding: 5px 10px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.get-out-newsletter span{
+    color: #F7F7F7;
+    font-size: 18px;
+}
+
+#subscribe-btn{
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color:#47525E;
+    font-size: 18px;
+}
