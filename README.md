@@ -14,7 +14,7 @@ BlackSnake
 {{Nombre del proyeccto en pendiente}} es una plataforma que permite a cualquier usuario leer recetas compartidas por ciertos usuarios específicos, con la opción de realizar búsquedas y filtrado en función de lo que busquen para comer. 
 
 ## Pantalla principal
-[](Plantilla/startbootstrap-clean-blog-gh-pages/homepage.html)
+[Homepage](Plantilla/startbootstrap-clean-blog-gh-pages/homepage.html)
 
 ## Enlace al diseño
 Prototipo: https://marvelapp.com/prototype/6d36862
