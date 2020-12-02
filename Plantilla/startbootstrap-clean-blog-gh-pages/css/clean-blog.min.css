@@ -328,7 +328,7 @@
 	vertical-align: top;
  }
 
- .floating-label-form-group input,.floating-label-form-group textarea{
+ .floating-label-form-group input,.floating-label-form-group textarea, .floating-label-form-group select{
  	border-radius: 500px;
  	height: 36px;
  	background-color: transparent;
@@ -338,7 +338,7 @@
 	border: 0 none;
 	padding: 0 10px;
     background-clip: border-box;
-	color: #fff;
+	color: rgb(0, 0, 0);
 	border: 1px solid #eaecf0;
  }
 
@@ -575,3 +575,17 @@
  	box-shadow: 10%;
  	color: #000;
  }
+
+ .map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}

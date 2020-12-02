@@ -91,7 +91,14 @@
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <label>Nombre</label>
-              <input type="text" id="name" required data-validation-required-message="Please enter your name.">
+              <input type="text" id="name" required data-validation-required-message="Por favor ingresa tu nombre.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Apellido</label>
+              <input type="text" id="name" required data-validation-required-message="Por favor ingresa tu apellido.">
               <p class="help-block text-danger"></p>
             </div>
           </div>
@@ -99,6 +106,21 @@
             <div class="form-group floating-label-form-group controls">
               <label>Email</label>
               <input type="email" id="email" required data-validation-required-message="Please enter your email address.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label for="date">Fecha de nacimiento:</label>
+              <input type="date" id="date" name="date" min="1920-01-01" max="2020-01-01" required>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label for="lugar">País de nacimiento:</label>
+              <select name="lugar" id="lugar" required>
+              </select>
               <p class="help-block text-danger"></p>
             </div>
           </div>
@@ -118,8 +140,8 @@
       </div>
     </div>
     <div class="row inner_pad">
-      <div class="col-sm-12 mx-auto text-center">
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1yErDFAJoV0o-j5xNbJOhK_O-UlZFt-O6" width="640" height="480"></iframe>
+      <div class="col-sm-12 mx-auto text-center map-responsive">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1yErDFAJoV0o-j5xNbJOhK_O-UlZFt-O6" width="640" height="480" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -161,6 +183,7 @@
   <!-- Contact Form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
   <script src="js/contact_me.js"></script>
+  <script src="js/contacto.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
