@@ -6,7 +6,7 @@
  body{
  	font-size:20px;
  	color:#212529;
- 	font-family: "Montserrat", san-serif;
+ 	font-family: "Lato", sans-serif;
  }
 
  ul{
@@ -82,10 +82,6 @@
  	color:#fff;
  	background:0 0;
  }
-
- .dark-font{
-	color: #000 !important;
-}
 
  #mainNav{
  	position:absolute;
@@ -334,7 +330,7 @@
  	background-color: transparent;
 	background-clip: padding-box;
  	max-width: 100%;
-	width: 100%;
+	width: 800px;
 	border: 0 none;
 	padding: 0 10px;
     background-clip: border-box;
@@ -438,13 +434,10 @@
 	color: #4a4a4a;
  }
 
- .red-button{
+ #nav-reg{
  	background-color: #eb4a36;
-	color: #fff !important;
- }
-
- .button{
  	border-radius: 500px;
+	color: #fff;
 	border: 1px solid transparent;
 	display: inline-block;
 	box-sizing: border-box;
@@ -455,11 +448,8 @@
 	text-align: center;
 	text-decoration: none;
 	text-transform: none;
- }
-
- .red-button:hover{
- 	opacity: 80%;
- 	color: #fff;
+	transition: 0.1s ease-in-out;
+	transition-property: color, background-color, border-color;
  }
 
  #nav-right{
@@ -480,7 +470,7 @@
  	align-items: center;
  }
 
- #secondCol{
+ #bottomContainer{
  	margin-top: 5%;
  	margin-left: 40px;
  	padding: 40px;
@@ -491,80 +481,91 @@
  .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 85% !important;
 }
-
-.inner_pad{
-	padding-right: 5%;
-	padding-left: 5%;
+.list-group-item{
+	color: black;
+}
+.frontImage{
+	position: relative;
+	display: block;
+	width: 80%;
+	height: 10%;
+	margin-left: 10%;
+	object-fit: cover;
+	overflow: hidden;
+	max-height: 700px;
+	
+	
+}
+.frontImage img{
+	margin: -0px 0px 0px 0px;
+	width: 100%;
+	height: 100%;
+	max-height: 500px;
+	margin-right: auto;
+	border-radius: 25px;
+}
+.imageText {
+	position: absolute;
+	color : white;
+	top: 50%;
+	left: 50%;
+	transform: translate(-90%, -80%);
 	margin-top: 5%;
-	margin-bottom: 6%;
+	font-family: "Lato", san-serif;
+  }
+  .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
 }
 
-.circle-icon{
-	vertical-align: middle;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 500px;
-	height: 42px;
-	width: 42px;
+.imageText h1{
+	font-size: 4vw;
 }
 
-.linked_in{
-	color: #0e76a8;
-	border: solid 1px #0e76a8;
+.imageText h4{
+	font-size: 2vw;
 }
 
-.facebook_icon{
-	color: #3b5998;
-    border: solid 1px #3b5998;
+.recipeName{
+	color:black;
+}
+.card-text{
+	text-align: right;
+	color: grey;
+}
+.videoText{
+	margin-left: 100px;
 }
 
-.google_plus{
-	color: #CC3333;
-	border: solid 1px #CC3333;
-}
-
-.reg-log-form>*{
-	margin-left: 0;
-	margin-top: 5%;
-	margin-bottom: 5%;
-}
-
-.padding-large{
-	padding: 15%;
-	margin-top: 20%;
-}
-
-.background-reg{
-	background-image: url("https://source.unsplash.com/7MAjXGUmaPw/600x700");
-}
-
-.background-in{
-	background-image: url(https://source.unsplash.com/2wq0ReWAM8I/600x600);
-}
-
-.background{
-	margin-top: 10%;
-	background-blend-mode: overlay;
-	background-color: #555;
+.imagegrid-container {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	height: 600px;
-	width: 600px;
+	padding-top: 20px;
 }
 
-
-.light-font{
-	color: #fff;
-	font-weight: bold; 
+@media only screen and (min-width:768px){
+	.imagegrid-container {
+		display: flex;
+		height: 300px;
+		flex-direction: row;
+		grid-template-columns: auto auto auto;
+		grid-gap: 50px;
+		padding-top: 20px;
+	}
 }
 
-.light-button{
- 	background-color: #fff;
- 	color: #000;
- }
-
- .light-button:hover{
- 	box-shadow: 10%;
- 	color: #000;
- }
+.teamCont{
+	position: relative;
+}
+.teamCont img{
+	width: 150px;
+	height: 150px;
+	border-radius: 25px;
+}
+.teamtxt>*{
+	text-align: center;
+	color : black;
+	font-size: 16px;
+}
