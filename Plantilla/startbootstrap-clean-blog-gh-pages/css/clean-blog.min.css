@@ -551,7 +551,7 @@
 	height: 600px;
 }
 
-@media only screen and (min-width:768px){
+@media only screen and (min-width:992px){
 	.background{
 		width: 600px;
 	}
