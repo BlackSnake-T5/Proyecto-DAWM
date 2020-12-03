@@ -1,0 +1,19 @@
+#myInput {
+    background-image: url('../img/search_icon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 0px 12px 0px;
+    margin-left: 0 ;
+    border: 1px solid #ddd;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    padding-left: 15px;
+  }
+
+#myInput input{
+    border: none;
+    margin-left: 40px;
+    width: calc(100% - 50px);
+}
