@@ -8,13 +8,15 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>contacto</title>
+  <title>Noticias</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Leckerli+One&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&amp;display=swap" rel="stylesheet">
@@ -22,8 +24,7 @@
 
   <!-- Custom styles for this template -->
   <link href="css/clean-blog.min.css" rel="stylesheet">
-  <link href="css/homepage.css" rel="stylesheet">
-  <link href="css/recipe.css" rel="stylesheet">
+  <link href="css/noticias.css" rel="stylesheet">
 
 </head>
 
@@ -76,72 +77,32 @@
       </div>
     </div>
   </nav>
-  
+
+
   <!-- Main Content -->
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 col-md-12 mx-auto" id="firstCol">
-      	<div>
-	      	<h1 class="margin_bot">Contáctanos</h1>
-	        <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
-	    </div>
-      </div>
-      <div class="col-lg-6 col-md-12 mx-auto" id="secondCol">
-        <form name="sentMessage" id="contactForm" novalidate>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label>Nombre</label>
-              <input type="text" id="name" required data-validation-required-message="Por favor ingresa tu nombre.">
-              <p class="help-block text-danger"></p>
+      <div class="col-lg-8 col-md-10 mx-auto">
+          <h1>Últimas novedades</h1>
+          <div class="imagegrid-container col-lg-12 col-md-10 mx-auto">
+            <a href="noticia.html">
+              <div class="teamCont">
+                <img src="img/chef_news.webp" alt="noticia_chef">
+                <div class="teamtxt">
+                  <h3>Nuevas reseñas con chefs</h3>
+                  <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, aliquam quis auctor scelerisque, sollicitudin mattis leo. Sed aliquet mauris a lorem suscipit, sed vulputate ante blandit. </h6>
+                </div>
+              </div>
+            </a>
+            <div class="teamCont">
+              <img src="img/news2.jpg" alt="noticia2_chef">
+              <div class="teamtxt">
+                <h3>Cocina desde casa!!</h3>
+                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, aliquam quis auctor scelerisque, sollicitudin mattis leo. Sed aliquet mauris a lorem suscipit, sed vulputate ante blandit. </h6>
+              </div>
             </div>
           </div>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label>Apellido</label>
-              <input type="text" id="name" required data-validation-required-message="Por favor ingresa tu apellido.">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label>Email</label>
-              <input type="email" id="email" required data-validation-required-message="Please enter your email address.">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label for="date">Fecha de nacimiento:</label>
-              <input type="date" id="date" name="date" min="1920-01-01" max="2020-01-01" required>
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label for="lugar">País de nacimiento:</label>
-              <select name="lugar" id="lugar" required>
-              </select>
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label>Mensage</label>
-              <textarea rows="5" id="message" required data-validation-required-message="Please enter a message."></textarea>
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <br>
-          <div id="success"></div>
-          <div class="text-center">
-          	<button type="submit" class="btn-primary" id="sendMessageButton">Send</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="row inner_pad">
-      <div class="col-sm-12 mx-auto text-center map-responsive">
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1yErDFAJoV0o-j5xNbJOhK_O-UlZFt-O6" width="640" height="480" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -155,18 +116,27 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <ul class="list-inline text-center">
             <li class="list-inline-item">
-              <a href="#" class="circle-icon facebook_icon">
-                <img width="30" height="30" src="img/facebook.png" alt="ícono de facebook">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#" class="circle-icon google_plus">
-                <img width="30" height="20" src="img/goog_plus.png" alt="ícono de google plus">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#" class="circle-icon linked_in">
-                <img width="20" height="20" src="img/linked_in.png" alt="ícono de linked in">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
               </a>
             </li>
           </ul>
@@ -179,11 +149,6 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Contact Form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
-  <script src="js/contacto.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
