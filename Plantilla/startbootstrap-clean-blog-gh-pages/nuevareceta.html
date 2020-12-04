@@ -116,18 +116,18 @@
                   </div>
               </div>
               <div class="bs-stepper-content">
-                <div id="test-l-1" class="content">
+                <div id="test-l-1" class="stepcontent">
                   <p class="text-center">Nombre de la Receta</p>
                   <input class="name" id="tituloInput" name="fname"><br><br>
                   <button class="btn btn-primary" onclick="stepper1.next(); f('tituloInput','tituloOutput') ">Siguiente</button>
                 </div>
-                <div id="test-l-2" class="content">
+                <div id="test-l-2" class="stepcontent">
                   <p class="text-center">Ingrese detalles de su receta</p>
                   <textarea class= "textContent"id="contenidoInput" rows="4" cols="50"></textarea><br><br>
                   <button class="btn btn-primary" onclick="stepper1.next(); f('contenidoInput','contenidoOutput')">Siguiente</button>
                   <button class="btn btn-primary" onclick="stepper1.previous(); ">Anterior</button>
                 </div>
-                <div id="test-l-3" class="content">
+                <div id="test-l-3" class="stepcontent">
                   <p class="text-center">test 3</p>
                     Seleccione imagen a cargar:
                     <br><br>
@@ -136,14 +136,14 @@
                   <button class="btn btn-primary" onclick="stepper1.next()">Siguiente</button>
                   <button class="btn btn-primary" onclick="stepper1.previous()">Anterior</button>
                 </div>
-                <div id="test-l-4" class="content">
+                <div id="test-l-4" class="stepcontent">
                     <p class="text-center">Vista Previa</p>
                     <h1 id = "tituloOutput", style = "text-align: center;"></h1>
                     <div style = "text-align: center;">    <img id="noticiaimg" src="#"/></div>
                     <br><br>
                     <p id = "contenidoOutput"> </p>
                     <br><br>
-                    <button class="btn btn-primary" onclick="alert('Se ha guardado la noticia')">Confirmar</button>
+                    <button class="btn btn-primary" onclick="alert('Se ha agregado la receta')">Confirmar</button>
                     <button class="btn btn-primary" onclick="stepper1.previous()">Anterior</button>
                   </div>
               </div>

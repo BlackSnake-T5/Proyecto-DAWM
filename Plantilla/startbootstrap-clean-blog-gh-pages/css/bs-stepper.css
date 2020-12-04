@@ -142,22 +142,22 @@
 }
 
 .bs-stepper.vertical .bs-stepper-pane,
-.bs-stepper.vertical .content {
+.bs-stepper.vertical .stepcontent {
   display: block;
 }
 
 .bs-stepper.vertical .bs-stepper-pane:not(.fade),
-.bs-stepper.vertical .content:not(.fade) {
+.bs-stepper.vertical .stepcontent:not(.fade) {
   display: block;
   visibility: hidden;
 }
 
 .bs-stepper-pane:not(.fade),
-.bs-stepper .content:not(.fade) {
+.bs-stepper .stepcontent:not(.fade) {
   display: none;
 }
 
-.bs-stepper .content.fade,
+.bs-stepper .stepcontent.fade,
 .bs-stepper-pane.fade {
   visibility: hidden;
   transition-duration: .3s;
@@ -165,29 +165,29 @@
 }
 
 .bs-stepper-pane.fade.active,
-.bs-stepper .content.fade.active {
+.bs-stepper .stepcontent.fade.active {
   visibility: visible;
   opacity: 1;
 }
 
 .bs-stepper-pane.active:not(.fade),
-.bs-stepper .content.active:not(.fade) {
+.bs-stepper .stepcontent.active:not(.fade) {
   display: block;
   visibility: visible;
 }
 
 .bs-stepper-pane.dstepper-block,
-.bs-stepper .content.dstepper-block {
+.bs-stepper .stepcontent.dstepper-block {
   display: block;
 }
 
 .bs-stepper:not(.vertical) .bs-stepper-pane.dstepper-none,
-.bs-stepper:not(.vertical) .content.dstepper-none {
+.bs-stepper:not(.vertical) .stepcontent.dstepper-none {
   display: none;
 }
 
 .vertical .bs-stepper-pane.fade.dstepper-none,
-.vertical .content.fade.dstepper-none {
+.vertical .stepcontent.fade.dstepper-none {
   visibility: hidden;
 }
 .name {
