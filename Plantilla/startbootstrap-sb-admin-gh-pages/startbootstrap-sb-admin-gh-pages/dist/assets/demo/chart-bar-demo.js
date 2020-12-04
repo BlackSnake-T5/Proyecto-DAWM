@@ -9,9 +9,9 @@ var myLineChart = new Chart(ctx, {
   data: {
     labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio"],
     datasets: [{
-      label: "Revenue",
-      backgroundColor: "rgba(2,117,216,1)",
-      borderColor: "rgba(2,117,216,1)",
+      label: "Nuevos Usuarios Por Mes",
+      backgroundColor: " #eb4a36",
+      borderColor: " #eb4a36",
       data: [23, 12 , 34, 52, 87, 120],
     }],
   },
