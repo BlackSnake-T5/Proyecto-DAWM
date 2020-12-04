@@ -572,6 +572,7 @@
  }
 
  .light-button:hover{
+ 	/*box-shadow: 10%;*/
  	color: #000;
  }
 
