@@ -649,6 +649,18 @@
 		font-size: 18px;
 	}
 
+	.facebook > a:hover{
+		color: #0077ff;
+	}
+	
+	.twitter > a:hover{
+		color: #00e1ff;
+	}
+	
+	.instagram > a:hover{
+		color: rgb(255, 27, 206);
+	}
+	
 @media only screen and (max-width: 990px){
 	.actual-footer > div{
 		margin-bottom: 25px;
