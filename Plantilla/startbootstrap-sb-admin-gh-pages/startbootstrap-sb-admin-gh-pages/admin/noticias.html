@@ -17,7 +17,7 @@
     <body class="sb-nav-fixed">
       <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
           <a class="navbar-brand" href="admin.html">Sabor Compartido</a>
-          <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
+          <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" ><i class="fas fa-bars"></i></button>
           <!-- Navbar Search-->
           <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
           </form>
@@ -48,13 +48,13 @@
                               Paginas
                               <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                           </a>
-                          <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                          <div class="collapse" id="collapsePages"  data-parent="#sidenavAccordion">
                               <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                   <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                                       Autenticación
                                       <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                   </a>
-                                  <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                  <div class="collapse" id="pagesCollapseAuth"  data-parent="#sidenavAccordionPages">
                                       <nav class="sb-sidenav-menu-nested nav">
                                           <a class="nav-link" href="login.html">Iniciar Sesión</a>
                                           <a class="nav-link" href="register.html">Registrarse</a>
@@ -65,7 +65,7 @@
                                       Error
                                       <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                   </a>
-                                  <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                  <div class="collapse" id="pagesCollapseError"  data-parent="#sidenavAccordionPages">
                                       <nav class="sb-sidenav-menu-nested nav">
                                           <a class="nav-link" href="401.html">Pagina 401</a>
                                           <a class="nav-link" href="404.html">Pagina 404</a>
@@ -95,8 +95,8 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container">
-                        <h1><br></h1>
-                        <h1>Agregar Noticias</h1>
+                        
+                        <h1><br>Agregar Noticias</h1>
                         <br>
  
                             <div id="stepper1" class="bs-stepper">
@@ -137,7 +137,7 @@
                                 </div>
                                 <div id="test-l-2" class="content">
                                   <p class="text-center">Ingrese el contenido de la noticia</p>
-                                  <textarea class= "textContent"id="contenidoInput" rows="4" cols="50"></textarea><br><br>
+                                  <textarea class= "textContent" id="contenidoInput" rows="4" cols="50"></textarea><br><br>
                                   <button class="btn btn-primary" onclick="stepper1.next(); f('contenidoInput','contenidoOutput')">Siguiente</button>
                                   <button class="btn btn-primary" onclick="stepper1.previous(); ">Anterior</button>
                                 </div>
@@ -146,14 +146,14 @@
                                     Seleccione imagen a cargar:
                                     <br><br>
                                     <input type='file' name="fileToUpload" id="fileToUpload" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);" /><br><br>
-                                  </form>
+                                  
                                   <button class="btn btn-primary" onclick="stepper1.next()">Siguiente</button>
                                   <button class="btn btn-primary" onclick="stepper1.previous()">Anterior</button>
                                 </div>
                                 <div id="test-l-4" class="content">
                                     <p class="text-center">Vista Previa</p>
-                                    <h1 id = "tituloOutput", style = "text-align: center;"></h1>
-                                    <div style = "text-align: center;">    <img id="noticiaimg" src="#"/></div>
+                                    <h1 id="tituloOutput" style="text-align: center;"> </h1>
+                                    <div style = "text-align: center;">    <img id="noticiaimg" src="#" alt="imagenSubida"/></div>
                                     <br><br>
                                     <p id = "contenidoOutput"> </p>
                                     <br><br>
