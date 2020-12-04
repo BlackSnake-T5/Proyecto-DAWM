@@ -453,7 +453,7 @@
  }
 
  #nav-right{
- 	margin-left: 15%;
+ 	margin-left: 5%;
  }
 
  .logo{
@@ -538,7 +538,7 @@
 	margin-left: 100px;
 }
 
-.imagegrid-container {
+.imagegrid-container-full {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -546,7 +546,7 @@
 }
 
 @media only screen and (min-width:900px){
-	.imagegrid-container {
+	.imagegrid-container-full {
 		display: flex;
 		height: 300px;
 		flex-direction: row;
