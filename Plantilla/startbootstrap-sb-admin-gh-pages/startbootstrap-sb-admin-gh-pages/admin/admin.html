@@ -14,7 +14,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <a class="navbar-brand" href="admin.html">Sabor Compartido</a>
-            <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
+            <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
             </form>
@@ -45,13 +45,13 @@
                                 Paginas
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                            <div class="collapse" id="collapsePages"  data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                                         Autenticación
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                    <div class="collapse" id="pagesCollapseAuth"  data-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="login.html">Iniciar Sesión</a>
                                             <a class="nav-link" href="register.html">Registrarse</a>
@@ -62,7 +62,7 @@
                                         Error
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                    <div class="collapse" id="pagesCollapseError"  data-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="401.html">Pagina 401</a>
                                             <a class="nav-link" href="404.html">Pagina 404</a>
@@ -104,7 +104,7 @@
                                         <i class="fas fa-chart-area mr-1"></i>
                                         Grafico de visitas
                                     </div>
-                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                                    <div class="card-body"><canvas id="myAreaChart" width="100" height="40"></canvas></div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
@@ -113,7 +113,7 @@
                                         <i class="fas fa-chart-bar mr-1"></i>
                                         Nuevos usuarios por mes
                                     </div>
-                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                    <div class="card-body"><canvas id="myBarChart" width="100" height="40"></canvas></div>
                                 </div>
                             </div>
                         </div>
@@ -124,7 +124,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <table class="table table-bordered" id="dataTable">
                                         <thead>
                                             <tr>
                                                 <th>Nombre</th>
@@ -133,14 +133,7 @@
                                                 <th>Fecha de Registro</th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Nombre</th>
-                                                <th>Ciudad</th>
-                                                <th>Edad</th>
-                                                <th>Fecha de Registro</th>
-                                            </tr>
-                                        </tfoot>
+                                        
                                         <tbody>
                                             <tr>
                                                 <td>Tiger Nixon</td>
@@ -306,6 +299,14 @@
                                             </tr>
 
                                         </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Ciudad</th>
+                                                <th>Edad</th>
+                                                <th>Fecha de Registro</th>
+                                            </tr>
+                                        </tfoot>
                                     </table>
                                 </div>
                             </div>

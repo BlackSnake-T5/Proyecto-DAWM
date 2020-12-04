@@ -96,8 +96,8 @@ abbr[data-original-title] {
           text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
+  /*-webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;*/
 }
 
 address {
@@ -260,6 +260,10 @@ select {
 
 [role=button] {
   cursor: pointer;
+}
+
+#myAreaChart{
+  width: 100%;
 }
 
 select {
@@ -4517,10 +4521,10 @@ input[type=button].btn-block {
     width: 100%;
   }
 }
-
+/*
 .accordion {
   overflow-anchor: none;
-}
+}*/
 .accordion > .card {
   overflow: hidden;
 }
