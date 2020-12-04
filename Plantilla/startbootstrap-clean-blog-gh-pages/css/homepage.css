@@ -742,8 +742,20 @@
 	justify-content: space-evenly;
 }
 
-.card-footer{
-	margin-bottom: 0;
-	height: 100%;
-	vertical-align: 50%;
+
+@media only screen and (min-width:1200px){ 
+	.card-footer{
+		vertical-align: 50%;
+		padding-top: 0;
+	}
+
+	.card > * {
+		display: grid;
+		grid-template-rows: 4fr 3fr 10%;
+		grid-template-columns: 100%;
+	}
+
+	.card a{
+		grid-area: 1 / 1 / 2 / 2;
+	}
 }
