@@ -83,12 +83,18 @@
 
 .content-details .title{
     font-weight: 600;
-    font-size: .75em;
+    font-size: .75vw;
+    text-align: center;
 }
+
 .content-details span:last-child{
     font-weight: 500;
     font-size: .6em;
 }
+
+
+
+
 
 .content:nth-child(2){
     border-right: 1px solid #ccc;
@@ -172,7 +178,7 @@
     margin-right: 10px;
 }
 
-@media only screen and (max-width:500px){
+@media only screen and (max-width:990px){
     .image-container{
         display: none;
     }
@@ -204,7 +210,16 @@
         flex-direction: column;
     }
 
+    .content-details .title{
+        font-size: 4vw;
+    }
+
+    .content-details span:last-child{
+        font-size: 3.5vw;
+    }
+
     .actual-footer{
         flex-direction: column;
     }
+
 }
