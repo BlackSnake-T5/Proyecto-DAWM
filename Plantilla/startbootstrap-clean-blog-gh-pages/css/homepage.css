@@ -742,3 +742,8 @@
 	justify-content: space-evenly;
 }
 
+.card-footer{
+	margin-bottom: 0;
+	height: 100%;
+	vertical-align: 50%;
+}
