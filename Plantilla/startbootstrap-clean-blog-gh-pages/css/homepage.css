@@ -308,6 +308,10 @@
  	}
  }
 
+ #copyright{
+	 color: #fff !important;
+ }
+
  .floating-label-form-group{
  	font-size:14px;
  	color: #fff;
@@ -502,7 +506,7 @@
 	height: 100%;
 	max-height: 500px;
 	margin-right: auto;
-	border-radius: 25px;
+	border-radius: 5px;
 }
 .imageText {
 	position: absolute;
@@ -565,4 +569,73 @@
 	li.IniRegNav{
 		display: none;
 	}
+	}
+
+	footer{
+		padding-bottom: 0;
+	}
+	
+	.actual-footer{
+		display: flex;
+		
+		background-color: #F95F62;
+		padding: 50px 20px;
+	}
+	
+	.first-half{
+		color:#fff;
+		display: flex;
+	}
+	
+	.nav-options, .other-options{
+		display: flex;
+		flex-direction: column;
+		margin-right: 20px;
+		font-size: 18px;
+		color: #F7F7F7;
+	}
+	
+	
+	.email-form{
+		display: flex;
+	}
+	.email-form input{
+		display: flex;
+		padding: 5px;
+		border: none;
+		margin-right: 10px;
+		border-radius: 1px;
+		font-size: 18px;
+	}
+	
+	.get-out-newsletter span{
+		color: #F7F7F7;
+		font-size: 18px;
+	}
+	
+	#subscribe-btn{
+		padding: 5px 10px;
+		border-radius: 5px;
+		cursor: pointer;
+		border: none;
+		outline: none;
+		color:#47525E;
+		font-size: 18px;
+	}
+
+@media only screen and (max-width: 500px){
+	.actual-footer > div{
+        margin-bottom: 25px;
+    }
+        .email-form{
+            flex-direction: column;
+        }
+
+        .email-form input{
+            margin: 0;
+        }
+
+        #subscribe-btn{
+            margin-top: 20px;
+        }
 }
