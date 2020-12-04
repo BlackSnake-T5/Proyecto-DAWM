@@ -667,8 +667,29 @@
 	.instagram > a:hover{
 		color: rgb(255, 27, 206);
 	}
-	
+
 @media only screen and (max-width: 990px){
+
+
+	.imageText{
+		width: 100%;
+		margin-left: 40%;
+	}
+	
+	.imageText h1{
+		margin-top: 20vw;
+		font-size: 8vw;
+	}
+
+	.imageText > *{
+		margin-bottom: 0;
+		text-align: center;
+	}
+	
+	.imageText h4{
+		font-size: 4vw;
+	}
+
 	.actual-footer > div{
 		margin-bottom: 25px;
 		width: 100%;
