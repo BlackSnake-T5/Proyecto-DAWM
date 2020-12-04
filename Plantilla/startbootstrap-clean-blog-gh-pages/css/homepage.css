@@ -434,6 +434,10 @@
 	padding-left: 10px;
  }
 
+ #searchform{
+	display: flex;
+	max-width: 150px;
+ }
  #search-bar{
  	box-sizing: border-box;
 	margin: 0;
@@ -464,9 +468,7 @@
 	transition-property: color, background-color, border-color;
  }
 
- #nav-right{
- 	margin-left: 5%;
- }
+
 
  .logo{
  	font-size: 1.5625rem;
@@ -698,3 +700,24 @@
 		}
 	
 }
+
+#navbarResponsive{
+	width: 70%;
+}
+
+#nav-right{
+	min-width: 30%;
+	margin: 0;
+}
+
+#navbar-container{
+	width: 100%;
+	justify-content: center;
+}
+
+.navcontainer{
+	display: flex;
+	width: 95%;
+	justify-content: space-evenly;
+}
+
