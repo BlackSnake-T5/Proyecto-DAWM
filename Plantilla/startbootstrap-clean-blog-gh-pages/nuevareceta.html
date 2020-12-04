@@ -85,8 +85,8 @@
   <!-- Main Content -->
   <main>
     <div class="container">
-        <h1><br></h1>
-        <h1>Agregar Recetas</h1>
+        
+        <h1><br>Agregar Recetas</h1>
         <br>
 
             <div id="stepper1" class="bs-stepper">
@@ -127,7 +127,7 @@
                 </div>
                 <div id="test-l-2" class="stepcontent">
                   <p class="text-center">Ingrese detalles de su receta</p>
-                  <textarea class= "textContent"id="contenidoInput" rows="4" cols="50"></textarea><br><br>
+                  <textarea class= "textContent" id="contenidoInput" rows="4" cols="50"></textarea><br><br>
                   <button class="btn btn-primary" onclick="stepper1.next(); f('contenidoInput','contenidoOutput')">Siguiente</button>
                   <button class="btn btn-primary" onclick="stepper1.previous(); ">Anterior</button>
                 </div>
@@ -136,14 +136,14 @@
                     Seleccione imagen a cargar:
                     <br><br>
                     <input type='file' name="fileToUpload" id="fileToUpload" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);" /><br><br>
-                  </form>
+                  
                   <button class="btn btn-primary" onclick="stepper1.next()">Siguiente</button>
                   <button class="btn btn-primary" onclick="stepper1.previous()">Anterior</button>
                 </div>
                 <div id="test-l-4" class="stepcontent">
                     <p class="text-center">Vista Previa</p>
-                    <h1 id = "tituloOutput", style = "text-align: center;"></h1>
-                    <div style = "text-align: center;">    <img id="noticiaimg" src="#"/></div>
+                    <h1 id = "tituloOutput" style = "text-align: center;">Titulo</h1>
+                    <div style = "text-align: center;">    <img id="noticiaimg" src="#" alt="Imagen a subir"></div>
                     <br><br>
                     <p id = "contenidoOutput"> </p>
                     <br><br>
@@ -158,48 +158,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="js/scripts.js"></script>
 <script src="js/bs-stepper.js"></script>
-<script>
-  var stepper1Node = document.querySelector('#stepper1')
-  var stepper1 = new Stepper(document.querySelector('#stepper1'))
-
-  stepper1Node.addEventListener('show.bs-stepper', function (event) {
-    console.warn('show.bs-stepper', event)
-  })
-  stepper1Node.addEventListener('shown.bs-stepper', function (event) {
-    console.warn('shown.bs-stepper', event)
-  })
-
-  var stepper2 = new Stepper(document.querySelector('#stepper2'), {
-    linear: false,
-    animation: true
-  })
-  var stepper3 = new Stepper(document.querySelector('#stepper3'), {
-    animation: true
-  })
-  var stepper4 = new Stepper(document.querySelector('#stepper4'))
-</script>
-<script>
-    function readURL(input) {
-if (input.files && input.files[0]) {
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
-        $('#noticiaimg')
-            .attr('src', e.target.result)
-            .width(300)
-            .height(300);
-    };
-
-    reader.readAsDataURL(input.files[0]);
-}
-}
-</script>
-<script type="text/javascript">
-    function f(idInput, idOutput) {
-       var t = document.getElementById(idInput).value;
-       document.getElementById(idOutput).innerHTML = t;
-    }
-    </script>
+<script src="js/nuevareceta.js"></script>
 
   <!-- Footer -->
   <footer>
