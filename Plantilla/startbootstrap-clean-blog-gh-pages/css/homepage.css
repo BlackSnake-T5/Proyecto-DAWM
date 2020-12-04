@@ -618,6 +618,10 @@
 		flex-direction: column;
 		margin-right: 20px;
 		font-size: 18px;
+	}
+
+
+	.nav-options span a{
 		color: #F7F7F7;
 	}
 	
@@ -632,12 +636,15 @@
 		margin-right: 10px;
 		border-radius: 1px;
 		font-size: 18px;
+		width: 80%;
 	}
 	
 	.get-out-newsletter span{
 		color: #F7F7F7;
 		font-size: 18px;
 	}
+
+
 	
 	#subscribe-btn{
 		padding: 5px 10px;

@@ -26,12 +26,15 @@
   <link href="css/clean-blog.min.css" rel="stylesheet">
   <link href="css/homepage.css" rel="stylesheet">
   <link href="css/noticia.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/3.1.0/introjs-rtl.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/3.1.0/introjs.min.css">
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light" data-intro='Bienvenido a Sabores Compartidos'>
+  <nav class="navbar navbar-expand-lg navbar-light" >
     <div class="container">
       <a class="navbar-brand logo" href="index.html">Sabores Compartidos</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,16 +43,16 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
-          <li class="nav-item" data-step='2' data-intro="En esta página podrás enterarte de las últimas noticias y recetas añadidas">
+          <li class="nav-item" >
             <a class="nav-op" href="noticias.html">Noticias</a>
           </li>
-          <li class="nav-item" data-step='3' data-intro="En este menú podrás observar y filtrar las recetas disponibles">
+          <li class="nav-item" data-step='2' data-intro="En este menú podrás observar y filtrar las recetas disponibles">
             <a class="nav-op" href="recetas.html">Recetas</a>
           </li>
-          <li class="nav-item" data-step='4' data-intro="Aqui podrás ponerte en contacto con nosotros">
+          <li class="nav-item">
             <a class="nav-op" href="contact.html" >Contáctanos</a>
           </li>
-          <li class="nav-item" data-step='5' data-intro="Aquí podras ver una breve descripción de nuestro equipo">
+          <li class="nav-item" >
             <a class="nav-op" href="about.html" >Quiénes somos</a>
           </li>
           <li class="nav-item IniRegNav">
@@ -79,9 +82,9 @@
   <!--image-->
   <br>
   <div class="main-container">
-    <div class="recipe-description-container">
+    <div class="recipe-description-container" data-position="right" data-intro="Detalle de la noticia">
       <div class="pasos-a-seguir-title">
-        <h2 id="ArtTitle">Nuevas reseñas con chefs</h2>
+        <h2 id="ArtTitle" >Nuevas reseñas con chefs</h2>
         <p id="ArtSubtitle" class="steps-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae felis nisl. Nam eu dignissim eros. Phasellus congue dolor nisl, in ultrices est vehicula a.</p>
       </div>
       <div class="image-container">
@@ -104,26 +107,27 @@
   <!--recipe section-->
 
 
-   <!-- Footer -->
-   <footer>
+
+  <!-- Footer -->
+  <footer>
     <div class="actual-footer">
-      <div class="first-half col-lg-4 col-md-4">
-        <div class="nav-options col-md-4">
-          <span>Home</span>
-          <span>About</span>
-          <span>Features</span>
-          <span>Pricing</span>
-          <span>Contact us</span>
+      <div class="first-half col-lg-3 col-md-3">
+        <div class="nav-options col-md-12">
+          <span><a href="index.html">Sabores Compartidos</a></span>
+          <span><a href="noticias.html">Noticias</a></span>
+          <span><a href="recetas.html">Recetas</a></span>
+          <span><a href="contact.html">Contáctanos</a></span>
+          <span><a href="about.html">Quiénes somos</a></span>
         </div>
-        <div class="other-options col-md-4">
+        <!-- <div class="other-options col-md-4">
           <span>Blog</span>
           <span>Search</span>
           <span>T & Cs</span>
           <span>Privacy</span>
           <span>Community</span>
-        </div>
+        </div> -->
       </div>
-      <div class="second-half col-lg-4 col-md-4">
+      <div class="second-half col-lg-6 col-md-6">
         <div class="get-our-newsletter">
           <span>Suscribete</span>
         </div>
@@ -133,7 +137,7 @@
           <button id='subscribe-btn'>Suscribirme</button>
         </div>
       </div>
-      <div class="col-lg-4 col-md-4 mx-auto">
+      <div class="col-lg-3 col-md-3 mx-auto">
         <ul class="list-inline text-center">
           <li class="list-inline-item twitter">
             <a href="#">
@@ -160,11 +164,10 @@
             </a>
           </li>
         </ul>
-        <p class="copyright text-muted" id="copyright">Copyright &copy; Your Website 2020</p>
+        <p class="copyright text-muted" id="copyright">Copyright &copy; Sabores Compartidos 2020</p>
       </div>
     </div>
 </footer>
-
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -176,6 +179,8 @@
   <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/3.1.0/intro.min.js"></script>
+  <script src="js/noticia.js"></script>
 </body>
 
 </html>
