@@ -749,6 +749,8 @@
 		padding-top: 0;
 	}
 
+	
+
 	.card > * {
 		display: grid;
 		grid-template-rows: 4fr 3fr 10%;
@@ -757,5 +759,24 @@
 
 	.card a{
 		grid-area: 1 / 1 / 2 / 2;
+	}
+}
+@media only screen and (max-width:1200px){ 
+	
+	.navcontainer{
+		flex-direction: column;
+	}
+
+	.navbar-toggler{
+		width: 10%;
+		align-self: flex-end;
+		content: none;
+		margin-top: 10px;
+		min-width: 50px;
+	}
+
+	.logo{
+		position: absolute;
+		top: 0;
 	}
 }
