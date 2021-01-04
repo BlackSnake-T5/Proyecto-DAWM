@@ -1,0 +1,134 @@
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mx-auto" id="firstCol">
+      	<div>
+	      	<h1 class="margin_bot">Contáctanos</h1>
+	        <p>Quieres contactarte con nosotros? Llena el formulario y te responderemos lo más rápido posible</p>
+	    </div>
+      </div>
+      <div class="col-lg-6 col-md-12 mx-auto" id="secondCol">
+        <form name="sentMessage" id="contactForm" novalidate>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Nombre</label>
+              <input type="text" id="name" required data-validation-required-message="Por favor ingresa tu nombre.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Apellido</label>
+              <input type="text" id="lastName" required data-validation-required-message="Por favor ingresa tu apellido.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Email</label>
+              <input type="email" id="email" required data-validation-required-message="Please enter your email address.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label for="date">Fecha de nacimiento:</label>
+              <input type="date" id="date" name="date" min="1920-01-01" max="2020-01-01" required>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label for="lugar">País de nacimiento:</label>
+              <select name="lugar" id="lugar" required>
+                <option label="Seleccione su país de nacimiento"></option>
+              </select>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Mensage</label>
+              <textarea rows="5" id="message" required data-validation-required-message="Please enter a message."></textarea>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <br>
+          <div id="success"></div>
+          <div class="text-center">
+          	<button type="submit" class="btn-primary" id="sendMessageButton">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row inner_pad">
+      <div class="col-sm-12 mx-auto text-center map-responsive">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1yErDFAJoV0o-j5xNbJOhK_O-UlZFt-O6" width="640" height="480" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+
+
+  <!-- Footer -->
+<footer>
+  <div class="actual-footer">
+    <div class="first-half col-lg-3 col-md-3">
+      <div class="nav-options col-md-12">
+        <span><a routerLink="/index" routerLinkActive="active">Sabores Compartidos</a></span>
+        <span><a routerLink="/noticias" routerLinkActive="active">Noticias</a></span>
+        <span><a routerLink="/recetas" routerLinkActive="active">Recetas</a></span>
+        <span><a routerLink="/contact" routerLinkActive="active">Contáctanos</a></span>
+        <span><a routerLink="/registro" routerLinkActive="active">Quiénes somos</a></span>
+      </div>
+      <!-- <div class="other-options col-md-4">
+        <span>Blog</span>
+        <span>Search</span>
+        <span>T & Cs</span>
+        <span>Privacy</span>
+        <span>Community</span>
+      </div> -->
+    </div>
+    <div class="second-half col-lg-6 col-md-6">
+      <div class="get-our-newsletter">
+        <span>Suscribete</span>
+      </div>
+
+      <div class="email-form">
+        <input type="text" placeholder="Ingresa tu email">
+        <button id='subscribe-btn'>Suscribirme</button>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-3 mx-auto">
+      <ul class="list-inline text-center">
+        <li class="list-inline-item twitter">
+          <a href="#">
+            <span class="fa-stack fa-lg">
+              <i class="fas fa-circle fa-stack-2x footer-icon"></i>
+              <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        <li class="list-inline-item facebook">
+          <a href="#">
+            <span class="fa-stack fa-lg">
+              <i class="fas fa-circle fa-stack-2x footer-icon"></i>
+              <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        <li class="list-inline-item instagram">
+          <a href="#">
+            <span class="fa-stack fa-lg">
+              <i class="fas fa-circle fa-stack-2x footer-icon"></i>
+              <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <p class="copyright text-muted" id="copyright">Copyright &copy; Sabores Compartidos 2020</p>
+    </div>
+  </div>
+</footer>
