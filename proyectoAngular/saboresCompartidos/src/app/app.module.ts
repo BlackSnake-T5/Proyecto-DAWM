@@ -13,6 +13,8 @@ import { NuevaRecetaComponent } from './nueva-receta/nueva-receta.component';
 import { RecetaComponent } from './receta/receta.component';
 import { RecetasComponent } from './recetas/recetas.component';
 import { RegistroComponent } from './registro/registro.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { RegistroComponent } from './registro/registro.component';
     NuevaRecetaComponent,
     RecetaComponent,
     RecetasComponent,
-    RegistroComponent
+    RegistroComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

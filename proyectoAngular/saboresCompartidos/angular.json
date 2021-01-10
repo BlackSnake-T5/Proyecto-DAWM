@@ -28,15 +28,28 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/assets/css/clean-blog.min.css",
-              "src/assets/css/homepage.css",
               "src/assets/vendor/bootstrap/css/bootstrap-grid.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/assets/vendor/fontawesome-free/css/all.min.css"
+              "src/assets/vendor/fontawesome-free/css/all.min.css",
+              "src/styles.css",
+              "src/assets/css/clean-blog.min.css",
+              "src/assets/css/homepage.css"
+              
             ],
             "scripts": [
+              "src/assets/js/bs-stepper.min.js",
+              "src/assets/js/busqueda.js",
               "src/assets/js/clean-blog.min.js",
+              "src/assets/js/contact_me.js",
+              "src/assets/js/contacto.js",
+              "src/assets/js/index.js",
+              "src/assets/js/jqBootstrapValidation.js",
+              "src/assets/js/noticia.js",
+              "src/assets/js/noticias.js",
+              "src/assets/js/nuevareceta.js",
+              "src/assets/js/receta.js",
+              "src/assets/js/recetas.js",
+              "src/assets/js/scripts.js",
               "src/assets/vendor/bootstrap/js/bootstrap.bundle.min.js",
               "src/assets/vendor/jquery/jquery.min.js"
             ]
