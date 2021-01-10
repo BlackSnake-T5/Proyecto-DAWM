@@ -594,6 +594,18 @@
 .search-icon{
 	color: #eb4a36 !important;
 }
-.footer-icon{
-	color: #eb4a36 !important;
+/*.footer-icon{
+	color: #eb4a36 ;
+}*/
+
+.facebook > a:hover{
+	color: #0077ff;
+}
+
+.twitter > a:hover{
+	color: #00e1ff;
+}
+
+.instagram > a:hover{
+	color: rgb(255, 27, 206);
 }

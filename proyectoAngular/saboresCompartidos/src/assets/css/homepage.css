@@ -35,7 +35,7 @@
 
  a:focus,a:hover{
  	opacity: 80%;
- 	color: #eb4a36 !important;
+ 	color: #eb4a36 ;
  	text-decoration: none !important;
  }
 
@@ -679,8 +679,8 @@
 	}
 	
 	.imageText h1{
-		margin-top: 20vw;
-		font-size: 8vw;
+		/*margin-top: 8vw;*/
+		font-size: 4vw;
 	}
 
 	.imageText > *{
@@ -689,7 +689,7 @@
 	}
 	
 	.imageText h4{
-		font-size: 4vw;
+		font-size: 2vw;
 	}
 
 	.actual-footer > div{
