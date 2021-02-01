@@ -38,3 +38,5 @@ function f(idInput, idOutput) {
     document.getElementById(idOutput).innerHTML = t;
  }
 
+
+ 

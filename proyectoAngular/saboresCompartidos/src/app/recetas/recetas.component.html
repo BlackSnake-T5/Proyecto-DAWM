@@ -1,5 +1,5 @@
 <div class="container">
-    <div id="myInput" data-intro="Aquí podrás filtrar recetas por nombre y autor. Escribe Chana">
+    <div id="myInput" data-intro="Aquí podrás filtrar recetas por nombre y autor. Escribe Chana" (keyup)="search($event.target)">
         <input type="text" id="search-recipes" placeholder="Buscar recetas" title="Ingrese texto">
     </div>
     <div class="row">
@@ -19,7 +19,7 @@
       <!-- /.col-lg-3 -->
 
       <div class="col-lg-9">
-        <div class="row">
+        <div id="cardGroup" class="row">
 
           <div class="card col-lg-4 col-md-6 mb-4" data-step="2" data-intro="Al dar click en la miniatura podrás ver una descripción más detallada de la receta">
             <div class="h-100">
@@ -125,5 +125,3 @@
 
 
 
-
-<script src="busqueda.js"></script>
