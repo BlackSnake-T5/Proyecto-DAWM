@@ -10,6 +10,7 @@ import { NuevaRecetaComponent } from './nueva-receta/nueva-receta.component';
 import { RecetaComponent } from './receta/receta.component';
 import { RecetasComponent } from './recetas/recetas.component';
 import { RegistroComponent } from './registro/registro.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
   { path: 'index', component: IndexComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'receta', component: RecetaComponent },
   { path: 'recetas', component: RecetasComponent },
   { path: 'registro', component: RegistroComponent },
+  { path: 'perfil', component: PerfilComponent },
   { path: '',   redirectTo: '/index', pathMatch: 'full' },
 ];
 

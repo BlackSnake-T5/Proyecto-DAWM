@@ -15,6 +15,7 @@ import { RecetasComponent } from './recetas/recetas.component';
 import { RegistroComponent } from './registro/registro.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HeaderComponent } from './header/header.component';
     RecetasComponent,
     RegistroComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
