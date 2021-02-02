@@ -21,89 +21,14 @@
       <div class="col-lg-9">
         <div id="cardGroup" class="row">
 
-          <div class="card col-lg-4 col-md-6 mb-4" data-step="2" data-intro="Al dar click en la miniatura podrás ver una descripción más detallada de la receta">
+          <div class="card col-lg-4 col-md-6 mb-4" [attr.data-step]="first?'2':null" [attr.data-intro]="first?'Al dar click en la miniatura podrás ver una descripción más detallada de la receta':null" #card *ngFor="let receta of recetas; let first = first">
             <div class="h-100">
-                <a [routerLink]="" (click)="recetaDetails('1234')" routerLinkActive="active"><img class="card-img-top" src="../../assets/img/recipeimg/Chana_Masala.jpg" alt="Chana Masala"></a>
+              <a [routerLink]="" (click)="recetaDetails(receta.id)" routerLinkActive="active"><img class="card-img-top" src="{{receta.image}}" alt="{{receta.name}}"></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a routerLink="/receta" routerLinkActive="active" class = "recipeName">Chana Masala</a>
+                  <a [routerLink]="" (click)="recetaDetails(receta.id)" routerLinkActive="active" class = "recipeName">{{receta.name}}</a>
                 </h4>
-                <p class="card-text">by John Brown</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="card col-lg-4 col-md-6 mb-4">
-            <div class=" h-100">
-              <a routerLink="/receta" routerLinkActive="active"><img class="card-img-top" src="../../assets/img/recipeimg/black_bean_burritos.jpg" id = recipeImg alt="Burritos con fréjoles negros"></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a routerLink="/receta" routerLinkActive="active" class = "recipeName">Black Bean Burrito</a>
-                </h4>
-                <p class="card-text">by John Brown</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="card col-lg-4 col-md-6 mb-4">
-            <div class=" h-100">
-              <a routerLink="/receta" routerLinkActive="active"><img class="card-img-top" src="../../assets/img/recipeimg/fanesca.jpg" alt="fanesca"></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a routerLink="/receta" routerLinkActive="active" class = "recipeName">Fanesca</a>
-                </h4>
-                <p class="card-text">by John Brown</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="card col-lg-4 col-md-6 mb-4">
-            <div class=" h-100">
-              <a routerLink="/receta" routerLinkActive="active"><img class="card-img-top" src="../../assets/img/recipeimg/tigrillo.jpg" alt="tigrillo"></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a routerLink="/receta" routerLinkActive="active" class = "recipeName">Tigrillo</a>
-                </h4>
-                <p class="card-text">by John Brown</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="card col-lg-4 col-md-6 mb-4">
-            <div class=" h-100">
-              <a routerLink="/receta" routerLinkActive="active"><img class="card-img-top" src="../../assets/img/recipeimg/Fritada.jpg" alt="fritada"></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a routerLink="/receta" routerLinkActive="active" class = "recipeName">Fritada</a>
-                </h4>
-                <p class="card-text">by John Brown</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="card col-lg-4 col-md-6 mb-4">
-            <div class=" h-100">
-              <a routerLink="/receta" routerLinkActive="active"><img class="card-img-top" src="../../assets/img/recipeimg/easy_jambalaya.jpg" alt="jambalaya"></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a routerLink="/receta" routerLinkActive="active" class = "recipeName">Easy Jambalaya</a>
-                </h4>
-                <p class="card-text">by John Brown</p>
+                <p class="card-text">by {{receta.author.first_name}} {{receta.author.last_name}}</p>
               </div>
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>

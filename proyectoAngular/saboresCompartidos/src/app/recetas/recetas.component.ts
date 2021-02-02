@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
+import { Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 import * as introJs from 'intro.js';
 
 @Component({
@@ -12,19 +12,25 @@ import * as introJs from 'intro.js';
 
 export class RecetasComponent implements OnInit {
   introJs = introJs()
-  recetaId = "1234"
-  constructor(private _router: Router) { }
+  recetas: any[] | undefined;
+  constructor(private _router: Router) {
+  }
 
   ngOnInit(): void {
-    //introjs
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    if (urlParams.get('tutorial') == 'true'){
-      introJs().setOption('doneLabel', 'Ver receta').start().oncomplete(function() {
-          window.location.href = '/receta?tutorial=true';
-      });
-    }
-    //introjs
+    fetch('http://5e8c1e373cbc.ngrok.io/api/v1/recipes')
+      .then( (resultado) => {
+        return resultado.json()
+      }) 
+      .then( (jsn) => {
+        this.recetas = Array.of(jsn)[0]
+        console.log(this.recetas)
+      })
+      .catch( (error) => {
+        console.log("Error ",error)
+      })
+      .then( () =>{
+        this.startIntroJs()
+      })
   }
 
   filtrar(keyword: string): void{
@@ -48,12 +54,20 @@ export class RecetasComponent implements OnInit {
   }
 
   recetaDetails(recetaId: string) {
-
-
-
     this._router.navigate(['/receta'], { 
       state: { recetaId: recetaId }
     });
   }
+
+  startIntroJs(): void{
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    if (urlParams.get('tutorial') == 'true'){
+      introJs().setOption('doneLabel', 'Ver receta').start().oncomplete(function() {
+          window.location.href = '/receta?tutorial=true';
+      });
+    }
+  }
+
 }
 
