@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
+import * as introJs from 'intro.js';
 
 @Component({
   selector: 'app-recetas',
@@ -9,10 +11,20 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class RecetasComponent implements OnInit {
-
-  constructor() { }
+  introJs = introJs()
+  recetaId = "1234"
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
+    //introjs
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    if (urlParams.get('tutorial') == 'true'){
+      introJs().setOption('doneLabel', 'Ver receta').start().oncomplete(function() {
+          window.location.href = '/receta?tutorial=true';
+      });
+    }
+    //introjs
   }
 
   filtrar(keyword: string): void{
@@ -33,6 +45,15 @@ export class RecetasComponent implements OnInit {
   search(input: any){
     console.log(input.value);
     this.filtrar(input.value.toUpperCase());
+  }
+
+  recetaDetails(recetaId: string) {
+
+
+
+    this._router.navigate(['/receta'], { 
+      state: { recetaId: recetaId }
+    });
   }
 }
 

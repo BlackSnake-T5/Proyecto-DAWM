@@ -30,6 +30,7 @@
             "styles": [
               "src/assets/vendor/bootstrap/css/bootstrap-grid.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/intro.js/introjs.css",
               "src/assets/vendor/fontawesome-free/css/all.min.css",
               "src/styles.css",
               "src/assets/css/clean-blog.min.css",
@@ -51,7 +52,8 @@
               "src/assets/js/recetas.js",
               "src/assets/js/scripts.js",
               "src/assets/vendor/bootstrap/js/bootstrap.bundle.min.js",
-              "src/assets/vendor/jquery/jquery.min.js"
+              "src/assets/vendor/jquery/jquery.min.js",
+              "node_modules/intro.js/intro.js"
             ]
           },
           "configurations": {
