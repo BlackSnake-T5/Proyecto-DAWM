@@ -11,14 +11,16 @@ export class NoticiasComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
+    window.addEventListener('load', function() {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
 
-    if (urlParams.get('tutorial') == 'true'){
-        introJs().setOption('doneLabel', 'Ver noticia').start().oncomplete(function() {
-            window.location.href = '/noticia?tutorial=true';
-        });
-    }
+      if (urlParams.get('tutorial') == 'true'){
+          introJs().setOption('doneLabel', 'Ver noticia').start().oncomplete(function() {
+              window.location.href = '/noticia?tutorial=true';
+          });
+      }
+    });
   }
 
 }
