@@ -3,49 +3,49 @@
   <br>
   <div class="main-container">
     <div class="recipe-description-container" data-intro="Detalles de la receta" data-position="auto">
-        <div class="image-container">
-          <img src = "../../assets/img/pancake.jpeg" alt="pancake de arándanos">
+        <div id="recetaImg" class="image-container">
+          <!--Imágen(img)-->
         </div>
       
       <div class ="recipe-description">
           <div class="recipe-description-content-right">
-            <div class="description-title">
-                <h2>Pancakes con blueberries bañados en miel</h2>
+            <div id="recetaTitle" class="description-title">
+                <!--titulo(h4)-->
             </div>
-            <div class="description-content">
-              <p>Pancakes a base de harina de trigo, con una suave textura y una cobertura de blueberries y miel</p>
+            <div id="recetaDesc" class="description-content">
+              <!--Descripción(p)-->
             </div>
             <div class="recipe-specs">
               <div class="content">
                 <div class="icon-container">
                   <i class="far fa-clock fa-3x"></i>
                 </div>
-                <div class="content-details">
+                <div id="tiempoActivo" class="content-details">
                   <span class="title">Tiempo activo</span>
-                  <span>10 minutos</span>
+                  <!--Tiempo(span)-->
                 </div>
               </div>
               <div class="content">
                 <div class="icon-container">
                   <i class="far fa-clock fa-3x"></i>
                 </div>
-                <div class="content-details">
+                <div id="tiempoPreparacion" class="content-details">
                   <span class="title">Tiempo de Preparacion</span>
-                  <span>15 minutos</span>
+                  <!--Tiempo(span)-->
                 </div>
               </div>
               <div class="content">
                 <div class="icon-container">
                   <img src="../../assets/img/Raster.png" alt="Raster">
                 </div>
-                <div class="content-details">
+                <div id="porciones" class="content-details">
                   <span class="title">Porciones totales</span>
-                  <span>4 personas</span>
+                  <!--Porciones(span)-->
                 </div>
               </div>
             </div>
-            <div class="recipe-author">
-              <span>Creado por Luis Fernandez</span>
+            <div id="autor" class="recipe-author">
+              <!--autor(span) Creado por...-->
             </div>
           </div>
         <br>
@@ -61,40 +61,13 @@
           <span class="steps-title">Pasos a seguir</span>
         </div>
         <ul class="steps">
-          <li>
+          <li *ngFor="let step of steps">
             <div class="number">
-              1.
+              {{step.setp_number}}.
               <div class="line"></div>
             </div>
             <p class="step-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat maximus nisi id feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            </p>
-          </li>
-          <li>
-            <div class="number">
-              2.
-              <div class="line"></div>
-            </div>
-            <p class="step-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat maximus nisi id feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            </p>
-          </li>
-          <li>
-            <div class="number">
-              3.
-              <div class="line"></div>
-            </div>
-            <p class="step-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat maximus nisi id feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            </p>
-          </li>
-          <li>
-            <div class="number">
-              4.
-              <div class="line"></div>
-            </div>
-            <p class="step-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat maximus nisi id feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              {{step.step_description}}
             </p>
           </li>
           
@@ -105,19 +78,12 @@
           <span class="steps-title">Ingredientes</span>
         </div>
         <ul class="ingredients-list">
-          <li><span> 400gr de harina de trigo</span></li>
-          <li><span> 4 huevos</span></li>
-          <li><span> 50gr de mantequilla</span></li>
-          <li><span> 2 tazas de leche</span></li>
-          <li><span> 120gr de blueberries</span></li>
-          <li><span> Miel al gusto</span></li>
+          <li *ngFor="let ingrediente of ingredientes"><span> {{ingrediente.measurement}} de {{ingrediente.name}}</span></li>
         </ul>
         <div class="etiquetas">
           <span class="etiquetas-title steps-title">Etiquetas</span>
           <div class="lista-etiquetas">
-            <span>Desayuno</span>
-            <span>Dulce</span>
-            <span>Vegetariano</span>
+            <span *ngFor="let tag of tags">{{tag.name}}</span>
           </div>
         </div>
       </div>

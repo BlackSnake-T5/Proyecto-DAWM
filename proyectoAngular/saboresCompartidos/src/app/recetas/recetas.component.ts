@@ -17,13 +17,12 @@ export class RecetasComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    fetch('http://5e8c1e373cbc.ngrok.io/api/v1/recipes')
+    fetch('https://saborescompartidos.herokuapp.com/api/v1/recipes')
       .then( (resultado) => {
         return resultado.json()
       }) 
       .then( (jsn) => {
         this.recetas = Array.of(jsn)[0]
-        console.log(this.recetas)
       })
       .catch( (error) => {
         console.log("Error ",error)
@@ -55,7 +54,7 @@ export class RecetasComponent implements OnInit {
 
   recetaDetails(recetaId: string) {
     this._router.navigate(['/receta'], { 
-      state: { recetaId: recetaId }
+      queryParams: { 'id': recetaId }
     });
   }
 
@@ -64,7 +63,7 @@ export class RecetasComponent implements OnInit {
     const urlParams = new URLSearchParams(queryString);
     if (urlParams.get('tutorial') == 'true'){
       introJs().setOption('doneLabel', 'Ver receta').start().oncomplete(function() {
-          window.location.href = '/receta?tutorial=true';
+          window.location.href = '/receta?tutorial=true&id=1';
       });
     }
   }

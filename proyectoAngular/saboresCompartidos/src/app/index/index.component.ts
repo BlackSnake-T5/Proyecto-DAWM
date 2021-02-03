@@ -13,13 +13,12 @@ export class IndexComponent implements OnInit {
   constructor(private _router: Router) { }
 
   ngOnInit(): void {
-    fetch('http://5e8c1e373cbc.ngrok.io/api/v1/recipes')
+    fetch('https://saborescompartidos.herokuapp.com/api/v1/recipes')
       .then( (resultado) => {
         return resultado.json()
       }) 
       .then( (jsn) => {
         this.recetas = Array.of(jsn)[0]
-        console.log(this.recetas)
       })
       .catch( (error) => {
         console.log("Error ",error)
@@ -42,7 +41,7 @@ export class IndexComponent implements OnInit {
 
   recetaDetails(recetaId: string) {
     this._router.navigate(['/receta'], { 
-      state: { recetaId: recetaId }
+      queryParams: { 'id': recetaId }
     });
   }
 
