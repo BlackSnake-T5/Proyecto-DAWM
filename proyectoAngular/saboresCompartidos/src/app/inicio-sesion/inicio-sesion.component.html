@@ -22,22 +22,22 @@
         </li>
       </ul>
       <div>
-        <p class="text-muted">O usa tu cuenta de E-mail:</p>
+        <p class="text-muted">O usa tu nombre de Usuario:</p>
       </div>
-      <form class="text-center">
+      <form class="text-center" [formGroup] = "inicioSesionForm" (ngSubmit)="onFormSubmit()">
         <div class="form-group floating-label-form-group controls inner_pad">
-          <label class="text-muted">Email</label>
-          <input class="dark-font" type="email" required>
+          <label class="text-muted">Nombre de Usuario</label>
+          <input class="dark-font floating-label-form-group-input" type="text" required formControlName="username">
         </div>
         <div class="form-group floating-label-form-group controls inner_pad">
           <label class="text-muted">Contraseña</label>
-          <input class="dark-font" type="password" required>
+          <input class="dark-font floating-label-form-group-input" type="password" required formControlName="password">
         </div>
         <div>
           <a class="text-muted" href="#">Olvidaste tu contraseña?</a>
         </div>
         <div class="form-group floating-label-form-group controls inner_pad">
-          <a routerLink="/perfil" routerLinkActive="active"><button class="red-button button">Sign In</button></a>
+          <input type="submit" class="red-button button" value="Iniciar Sesión">
         </div>
       </form>
     </div>

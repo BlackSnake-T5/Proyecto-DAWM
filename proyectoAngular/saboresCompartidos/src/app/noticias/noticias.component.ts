@@ -15,9 +15,8 @@ export class NoticiasComponent implements OnInit {
   ngOnInit(): void {
     
     
-    fetch('https://saborescompartidos.herokuapp.com/api/v1/news/')
+    fetch('https://saborescompartidos.herokuapp.com/api/v1/news')
       .then( (resultado) => {
-        console.log(resultado)
         return resultado.json()
       }) 
       .then( (jsn) => {
