@@ -3,16 +3,17 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto" data-intro="Se muestra un lista de las noticas más recientes" data-position="top">
         <h1 >Últimas novedades</h1>
-        <div class="imagegrid-container-full col-lg-12 col-md-10 mx-auto" >
-          <a routerLink="/noticia" routerLinkActive="active" data-step='2' data-intro="Al dar click podrás ver un detalle mas amplio de la noticia" data-position="top">
+        <div class="imagegrid-container-full col-lg-12 col-md-10 mx-auto" *ngFor = 'let noticia of noticias' >
+          <a routerLink="" (click)='noticiaDetails(noticia.id)' routerLinkActive="active" data-step='2' data-intro="Al dar click podrás ver un detalle mas amplio de la noticia" data-position="top">
             <div class="teamCont">
-              <img src="../../assets/img/chef_news.webp" alt="noticia_chef">
+              <img src="{{noticia['image']}}" alt="{{noticia['title']}}">
               <div class="teamtxt">
-                <h3>Nuevas reseñas con chefs</h3>
-                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, aliquam quis auctor scelerisque, sollicitudin mattis leo. Sed aliquet mauris a lorem suscipit, sed vulputate ante blandit. </h6>
+                <h3>{{noticia['title']}}</h3>
+                <h6>{{noticia['content'].length > 150 ? noticia['content'].substring(0,150) + "..." : noticia['content']}}</h6>
               </div>
             </div>
           </a>
+          <!--
           <a routerLink="/noticia" routerLinkActive="active">
             <div class="teamCont">
               <img src="../../assets/img/news2.jpg" alt="noticia2_chef">
@@ -21,7 +22,7 @@
                 <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, aliquam quis auctor scelerisque, sollicitudin mattis leo. Sed aliquet mauris a lorem suscipit, sed vulputate ante blandit. </h6>
               </div>
             </div>
-          </a>
+          </a>-->
         </div>
       </div>
     </div>
