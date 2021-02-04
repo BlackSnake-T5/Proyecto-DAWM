@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginObj } from '../login-obj';
+import {AuthServiceService} from '../auth-service.service'
+import { StorageService } from '../storage.service';
+import { Session } from '../session.model';
 
 @Component({
   selector: 'app-inicio-sesion',
@@ -10,23 +13,38 @@ import { LoginObj } from '../login-obj';
   styleUrls: ['./inicio-sesion.component.css']
 })
 export class InicioSesionComponent implements OnInit {
+  public submitted: Boolean = false;
+  public error: {code: number, message: string}|null = null;
+
   inicioSesionForm = new FormGroup({
     username: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
   });
   loginObj: LoginObj | undefined;
+  private redirectUrl = 'index';
 
-  constructor(private _router: Router, private http: HttpClient) { }
+  constructor(private _router: Router, 
+              private storageService: StorageService,
+              private authServiceService: AuthServiceService) { }
 
   ngOnInit(): void {
   }
 
   onFormSubmit(): void {
-    console.log('Usuario:' + this.inicioSesionForm.get('username')?.value);
-    console.log('Contraseña:' + this.inicioSesionForm.get('password')?.value);
+    this.submitted = true;
+    this.error = null;
     this.loginObj = new LoginObj(this.inicioSesionForm.get('username')?.value, this.inicioSesionForm.get('password')?.value)
-    console.log(this.loginObj)
-    console.log(this.http.post('https://saborescompartidos.herokuapp.com/api/v1/auth-token', [this.loginObj.password, this.loginObj.password]))
+    this.authServiceService.login(this.loginObj).subscribe(
+      data => this.login(data),
+      error => console.log(error)
+    );
+
+  }
+
+  private login(data: Session){
+    console.log(data);
+    this.storageService.setCurrentSession(data);
+    this._router.navigate([this.redirectUrl]);
   }
 
 }
