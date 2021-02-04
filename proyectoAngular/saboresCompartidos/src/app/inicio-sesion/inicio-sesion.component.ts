@@ -44,7 +44,8 @@ export class InicioSesionComponent implements OnInit {
   private login(data: Session){
     console.log(data);
     this.storageService.setCurrentSession(data);
-    this._router.navigate([this.redirectUrl]);
+    this._router.navigate([this.redirectUrl])
+    .then(() => window.location.reload());
   }
 
 }
