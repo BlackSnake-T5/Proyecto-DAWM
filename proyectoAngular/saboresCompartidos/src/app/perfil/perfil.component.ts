@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user.model';
 import { StorageService } from '../storage.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -11,7 +12,7 @@ export class PerfilComponent implements OnInit {
   profile: any | null | undefined;
   recipeNumber: number = 0;
 
-  constructor( private storageService: StorageService,) { }
+  constructor( private storageService: StorageService, private _router: Router) { }
 
   ngOnInit(): void {
     console.log(this.storageService.getCurrentSession())
@@ -29,8 +30,15 @@ export class PerfilComponent implements OnInit {
       .catch( (error) => {
         console.log("Error ",error)
       })
+    }else{
+      this._router.navigate(['inicio_sesion']);
     }
     
+  }
+
+  logout(): void{
+    this.storageService.logout()
+    this._router.navigate(['inicio_sesion']);
   }
 
 }
