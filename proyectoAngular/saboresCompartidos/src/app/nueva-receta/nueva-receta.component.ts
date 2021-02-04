@@ -18,7 +18,7 @@ export class NuevaRecetaComponent implements OnInit {
               private nuevaRecetaService: NuevaRecetaService) {}
   
   productForm?: FormGroup;
-  stepper1?: Stepper;
+  public stepper1?: Stepper;
 
   next() {
     this.stepper1?.next();
@@ -42,6 +42,7 @@ export class NuevaRecetaComponent implements OnInit {
       tiempoPreparacion: [],
       porciones: [],
       tags: this.fb.array([this.fb.group({tag:''})]),
+      img: []
     })
 
     this.stepper1 = new Stepper(document.querySelector('#stepper1') as Element, {
@@ -50,16 +51,20 @@ export class NuevaRecetaComponent implements OnInit {
     })
   }
 
+  get img(){
+    return this.productForm?.get('img');
+  }
+
   get tiempoActivo(){
-    return this.productForm?.get('tiempoActivo') as FormGroup;
+    return this.productForm?.get('tiempoActivo');
   }
 
   get tiempoPreparacion(){
-    return this.productForm?.get('tiempoPreparacion') as FormGroup;
+    return this.productForm?.get('tiempoPreparacion');
   }
 
   get porciones(){
-    return this.productForm?.get('porciones') as FormGroup;
+    return this.productForm?.get('porciones');
   }
 
 
