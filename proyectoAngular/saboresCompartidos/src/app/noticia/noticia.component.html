@@ -4,8 +4,7 @@
   <div class="main-container">
     <div class="recipe-description-container" data-intro="Detalle de la noticia" data-position="right">
       <div class="pasos-a-seguir-title">
-        <h2 id="ArtTitle" >{{noticia['title']}}</h2>
-        <p id="ArtSubtitle" class="steps-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae felis nisl. Nam eu dignissim eros. Phasellus congue dolor nisl, in ultrices est vehicula a.</p>
+        <h2 id="ArtTitle" >{{noticia.title}}</h2>
       </div>
       <div class="image-container">
         <img src = "https://saborescompartidos.herokuapp.com{{noticia['image']}}" alt="noticia_chef">
@@ -18,7 +17,7 @@
     <div class="steps-container-center">
       <div id="articleBody" class="pasos-a-seguir col-lg-11 col-sm-10">
         <p>{{noticia['content']}}</p>
-        <p>{{noticia['author']['id']}}, 12/4/2020</p>
+        <p>{{noticia['author']['first_name']}} {{noticia['author']['last_name']}}, {{(''+noticia['creation_date']).substring(0,10)}}</p>
       </div>
     </div>
   </div>

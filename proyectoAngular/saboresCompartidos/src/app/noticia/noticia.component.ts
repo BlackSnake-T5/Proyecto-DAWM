@@ -15,23 +15,25 @@ export class NoticiaComponent implements OnInit {
   
 
   ngOnInit(): void {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
+    const queryyString = window.location.search;
+    const urlParams = new URLSearchParams(queryyString);
     fetch('https://saborescompartidos.herokuapp.com/api/v1/news/'+urlParams.get('id'))
       .then( (resultado) => {
+        console.log(resultado);
         return resultado.json()
       }) 
       .then( (jsn) => {
-        this.noticia = Array.of(jsn.response)[0]
+        this.noticia = jsn['response']
         console.log(this.noticia)
+        console.log(this.noticia['title']);
       })
       .catch( (error) => {
         console.log("Error ",error)
       })
       .then( () => {
         window.addEventListener('load', function() {
-          const queryString = window.location.search;
-          const urlParams = new URLSearchParams(queryString);
+          const queryyyString = window.location.search;
+          const urlParams = new URLSearchParams(queryyyString);
           if (urlParams.get('tutorial') == 'true'){
               introJs().setOption('doneLabel', 'Ir a recetas').start().oncomplete(function() {
                   window.location.href = '/recetas?tutorial=true';
