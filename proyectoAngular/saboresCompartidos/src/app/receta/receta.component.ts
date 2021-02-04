@@ -12,6 +12,7 @@ export class RecetaComponent implements OnInit {
   ingredientes: any[] | undefined;
   steps: any[] | undefined;
   tags: any[] | undefined;
+  comments: any[] | undefined;
   fetchReceta = 'https://saborescompartidos.herokuapp.com/api/v1/recipes/'
   introJS = introJs()
   constructor(public router: Router) {
@@ -112,6 +113,15 @@ export class RecetaComponent implements OnInit {
             console.log(jsn)
             this.tags = Array.of(jsn)[0]
             console.log(this.tags)
+          })
+        fetch(this.fetchReceta + id.toString() + "/comments")
+          .then( (resultado)=>{
+            return resultado.json()
+          })
+          .then( (jsn)=>{
+            console.log(jsn)
+            this.comments = Array.of(jsn.response)[0]
+            console.log(this.comments)
           })
       })
       .catch( (error) => {

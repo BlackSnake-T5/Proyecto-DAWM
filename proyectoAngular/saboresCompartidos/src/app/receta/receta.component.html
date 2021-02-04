@@ -115,14 +115,14 @@
               <button type="reset" class="btn btn-default">Cancelar</button>
             </span>
           </div>
-          <div class="comment-box">
+          <div class="comment-box" *ngFor="let comment of comments">
             <span class="commenter-pic">
               <i class="far fa-user-circle"></i>
             </span>
             <span class="commenter-name">
-              <a href="#">Happy markuptag</a> <span class="comment-time">Hace 2 horas</span>
+              <a href="#">{{comment.author.username}}</a> <span class="comment-time">{{comment.creation_date}}</span>
             </span>       
-            <p class="comment-txt more">Suspendisse massa enim, condimentum sit amet maximus quis, pulvinar sit amet ante. Fusce eleifend dui mi, blandit vehicula orci iaculis ac.</p>
+            <p class="comment-txt more">{{comment.text}}</p>
             <div class="comment-meta">
               <button class="comment-like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 99</button>
               <button class="comment-dislike"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> 149</button> 
@@ -139,7 +139,7 @@
               </span>
             </div>
           </div>
-          <div class="comment-box">
+          <!--<div class="comment-box">
             <span class="commenter-pic">
               <i class="far fa-user-circle"></i>
             </span>
@@ -180,7 +180,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>

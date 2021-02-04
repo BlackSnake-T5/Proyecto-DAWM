@@ -22,7 +22,7 @@ export class NoticiaComponent implements OnInit {
         return resultado.json()
       }) 
       .then( (jsn) => {
-        this.noticia = jsn
+        this.noticia = Array.of(jsn.response)[0]
         console.log(this.noticia)
       })
       .catch( (error) => {
