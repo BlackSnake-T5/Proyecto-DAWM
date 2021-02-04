@@ -14,7 +14,7 @@ import { Session } from '../session.model';
 })
 export class InicioSesionComponent implements OnInit {
   public submitted: Boolean = false;
-  public error: {code: number, message: string}|null = null;
+  public error:  string|null = null;
 
   inicioSesionForm = new FormGroup({
     username: new FormControl('', Validators.required),
