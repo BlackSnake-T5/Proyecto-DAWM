@@ -29,10 +29,12 @@
           <label class="text-muted">Nombre de Usuario</label>
           <input class="dark-font floating-label-form-group-input" type="text" required formControlName="username">
         </div>
+    
         <div class="form-group floating-label-form-group controls inner_pad">
           <label class="text-muted">Contraseña</label>
           <input class="dark-font floating-label-form-group-input" type="password" required formControlName="password">
         </div>
+        <span style="color: red;" *ngIf="submitted && !inicioSesionForm.controls.password.hasError('required')">{{error}}</span>
         <div>
           <a class="text-muted" href="#">Olvidaste tu contraseña?</a>
         </div>
