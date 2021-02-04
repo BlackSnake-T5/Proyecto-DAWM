@@ -24,19 +24,24 @@
       <div>
         <p class="text-muted">O usa tu cuenta de E-mail:</p>
       </div>
-      <form class="text-center">
+      <form class="text-center" [formGroup] = "registerForm" (ngSubmit)="onFormSubmit()">
         <div class="form-group floating-label-form-group controls inner_pad">
           <label class="text-muted">Nombre de usuario</label>
-          <input class="dark-font floating-label-form-group-input" type="text" required>
+          <input class="dark-font floating-label-form-group-input" type="text" required formControlName="username">
         </div>
         <div class="form-group floating-label-form-group controls inner_pad">
           <label class="text-muted">Email</label>
-          <input class="dark-font floating-label-form-group-input" type="email" required>
+          <input class="dark-font floating-label-form-group-input" type="email" required formControlName="email">
         </div>
         <div class="form-group floating-label-form-group controls inner_pad">
           <label class="text-muted">Contraseña</label>
-          <input class="dark-font floating-label-form-group-input" type="password" required>
+          <input class="dark-font floating-label-form-group-input" type="password" required formControlName="password">
         </div>
+        <div class="form-group floating-label-form-group controls inner_pad">
+          <label class="text-muted">Confirmar Contraseña</label>
+          <input class="dark-font floating-label-form-group-input" type="password" required formControlName="confirmPassword">
+        </div>
+        <span style="color: red;" *ngIf="submitted && !registerForm.controls.password.hasError('required')">{{error}}</span>
         <div class="form-group floating-label-form-group controls inner_pad">
           <input type="submit" class="red-button button" value="Registrarse">
         </div>

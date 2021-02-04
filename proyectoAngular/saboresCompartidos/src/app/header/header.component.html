@@ -38,11 +38,14 @@
     <a routerLink="/recetas" routerLinkActive="active">
       <i class="fas fa-search search-icon"></i> 
       </a>
+      <div *ngIf="!logged" id="logRegBtns" >
         <a routerLink="/inicio_sesion" routerLinkActive="active" class="nav-op">Iniciar sesión</a>
         <div id="registro" class="collapse navbar-collapse">
           <a routerLink="/registro" routerLinkActive="active" class="nav-op red-button button">Registro</a>
         </div>
+      </div>
         <a routerLink="/perfil" routerLinkActive="active" class="circle-icon google_plus"><i class="fas fa-user"></i></a>
+        <a routerLink="" (click)="startTutorial()" routerLinkActive="active" class="circle-icon google_plus"><i class="fas fa-exclamation"></i></a>
       </div>
     </div>
   </nav>
