@@ -796,3 +796,8 @@
 		top: 0;
 	}
 }
+
+#logRegBtns{
+	display: flex;
+	align-items: center;
+}
