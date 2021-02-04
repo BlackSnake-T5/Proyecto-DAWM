@@ -1,6 +1,6 @@
 <!-- Main Content -->
 <main>
-    <div class="container">
+    <form class="container" [formGroup]="productForm">
         
         <h1><br>Agregar Recetas</h1>
         <br>
@@ -17,20 +17,41 @@
                 <div class="step" data-target="#test-l-2">
                   <button type="button" class="btn step-trigger">
                     <span class="bs-stepper-circle">2</span>
-                    <span class="bs-stepper-label">Contenido</span>
+                    <span class="bs-stepper-label">Ingredientes</span>
                   </button>
                 </div>
                 <div class="line"></div>
                 <div class="step" data-target="#test-l-3">
                   <button type="button" class="btn step-trigger">
                     <span class="bs-stepper-circle">3</span>
-                    <span class="bs-stepper-label">Agregar foto</span>
+                    <span class="bs-stepper-label">Pasos a seguir</span>
                   </button>
                 </div>
                 <div class="line"></div>
                 <div class="step" data-target="#test-l-4">
+                  <button type="button" class="btn step-trigger">
+                    <span class="bs-stepper-circle">4</span>
+                    <span class="bs-stepper-label">Información adicional</span>
+                  </button>
+                </div>
+                <div class="line"></div>
+                <div class="step" data-target="#test-l-5">
+                  <button type="button" class="btn step-trigger">
+                    <span class="bs-stepper-circle">5</span>
+                    <span class="bs-stepper-label">Etiquetas</span>
+                  </button>
+                </div>
+                <div class="line"></div>
+                <div class="step" data-target="#test-l-6">
+                  <button type="button" class="btn step-trigger">
+                    <span class="bs-stepper-circle">6</span>
+                    <span class="bs-stepper-label">Agregar foto</span>
+                  </button>
+                </div>
+                <div class="line"></div>
+                <div class="step" data-target="#test-l-7">
                     <button type="button" class="btn step-trigger">
-                      <span class="bs-stepper-circle">4</span>
+                      <span class="bs-stepper-circle">7</span>
                       <span class="bs-stepper-label">Confirmar</span>
                     </button>
                   </div>
@@ -38,37 +59,103 @@
               <div class="bs-stepper-content">
                 <div id="test-l-1" class="stepcontent">
                   <p class="text-center">Nombre de la Receta</p>
-                  <input class="name" id="tituloInput" name="fname"><br><br>
-                  <button class="btn btn-primary" onclick="stepper1.next(); f('tituloInput','tituloOutput') ">Siguiente</button>
+                  <input class="name" id="tituloInput" name="fname" formControlName="title"><br><br>
+                  <button class="btn btn-primary" (click)="stepper1.next();   ">Siguiente</button>
                 </div>
                 <div id="test-l-2" class="stepcontent">
-                  <p class="text-center">Ingrese detalles de su receta</p>
-                  <textarea class= "textContent" id="contenidoInput" rows="4" cols="50"></textarea><br><br>
-                  <button class="btn btn-primary" onclick="stepper1.next(); f('contenidoInput','contenidoOutput')">Siguiente</button>
-                  <button class="btn btn-primary" onclick="stepper1.previous(); ">Anterior</button>
+                  <p class="text-center">Ingrese los ingredientes de su receta</p>
+                  <div formArrayName="ingredients">
+                    <div *ngFor="let item of ingredients.controls; let pointIndex=index" [formGroupName]="pointIndex">
+                      <label>
+                        Ingrediente: <input formControlName="ingredient" />                             
+                      </label>
+                      <button class="btn btn-primary" (click)="deleteIngredient(pointIndex); ">Borrar ingrediente</button>
+                    </div>
+                  </div>
+                  <br>
+                  <button class="btn btn-primary" (click)="addIngredient();  ">Agregar Ingrediente</button>
+                  <br>
+                  <br>
+                  <br>
+                  <button class="btn btn-primary" (click)="stepper1.previous(); ">Anterior</button>
+                  <button class="btn btn-primary" (click)="stepper1.next();  ">Siguiente</button>
                 </div>
                 <div id="test-l-3" class="stepcontent">
-                  <p class="text-center">test 3</p>
+                  <p class="text-center">Pasos a seguir</p>
+                  <div formArrayName="pasos">
+                    <div *ngFor="let item of steps.controls; let pointIndex=index" [formGroupName]="pointIndex">
+                      <label class="textarea">
+                        Paso {{pointIndex+1}}: <textarea class= "textContent" formControlName="paso"></textarea>                             
+                      </label>
+                      <button class="btn btn-primary" (click)="deletePaso(pointIndex); ">Borrar Paso</button>
+                    </div>
+                  </div>
+                  <br>
+                  <button class="btn btn-primary" (click)="addPaso();  ">Agregar Paso</button>
+                  <br>
+                  <br>
+                  <br>
+                  <br><br>
+                  <button class="btn btn-primary" (click)="stepper1.previous(); ">Anterior</button>
+                  <button class="btn btn-primary" (click)="stepper1.next();  ">Siguiente</button>
+                </div>
+                <div id="test-l-4" class="stepcontent">
+                  <p class="text-center">Ingrese detalles adicionales de su receta</p>
+                  <label>
+                        Tiempo Activo: <input formControlName="tiempoActivo" placeholder="minutos, horas"/>                             
+                  </label>
+
+                  <label>
+                        Tiempo de Preparación: <input formControlName="tiempoPreparacion" placeholder="minutos, horas"/>                             
+                  </label>
+
+                  <label>
+                        Porciones: <input formControlName="porciones" /> porciones                             
+                  </label>
+                  <br>
+                  <button class="btn btn-primary" (click)="stepper1.previous(); ">Anterior</button>
+                  <button class="btn btn-primary" (click)="stepper1.next();  ">Siguiente</button>
+                </div>
+                <div id="test-l-5" class="stepcontent">
+                  <p class="text-center">Ingrese etiquetas de su receta</p>
+                  <div formArrayName="tags">
+                    <div *ngFor="let item of tags.controls; let pointIndex=index" [formGroupName]="pointIndex">
+                      <label>
+                        Etiqueta: <input formControlName="tag" />                             
+                      </label>
+                      <button class="btn btn-primary" (click)="deleteTag(pointIndex); ">Borrar Etiqueta</button>
+                    </div>
+                  </div>
+                  <br>
+                  <button class="btn btn-primary" (click)="addTag();  ">Agregar Etiqueta</button>
+                  <br>
+                  <br>
+                  <br>
+                  <button class="btn btn-primary" (click)="stepper1.previous(); ">Anterior</button>
+                  <button class="btn btn-primary" (click)="stepper1.next();  ">Siguiente</button>
+                </div>
+                <div id="test-l-6" class="stepcontent">
+                  <p class="text-center">Subir Imagen</p>
                     Seleccione imagen a cargar:
                     <br><br>
                     <input type='file' name="fileToUpload" id="fileToUpload" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);" /><br><br>
                   
-                  <button class="btn btn-primary" onclick="stepper1.next()">Siguiente</button>
-                  <button class="btn btn-primary" onclick="stepper1.previous()">Anterior</button>
+                  <button class="btn btn-primary" (click)="stepper1.previous(); ">Anterior</button>
+                  <button class="btn btn-primary" (click)="stepper1.next();  ">Siguiente</button>
                 </div>
-                <div id="test-l-4" class="stepcontent">
+                <div id="test-l-7" class="stepcontent">
                     <p class="text-center">Vista Previa</p>
                     <h1 id = "tituloOutput" style = "text-align: center;">Titulo</h1>
                     <div style = "text-align: center;">    <img id="noticiaimg" src="#" alt="Imagen a subir"></div>
                     <br><br>
                     <p id = "contenidoOutput"> </p>
                     <br><br>
-                    <button class="btn btn-primary" onclick="alert('Se ha agregado la receta')">Confirmar</button>
-                    <button class="btn btn-primary" onclick="stepper1.previous()">Anterior</button>
+                    <button class="btn btn-primary" (click)="alert('Se ha agregado la receta')">Confirmar</button>
+                    <button class="btn btn-primary" (click)="stepper1.previous()">Anterior</button>
                   </div>
               </div>
             </div>
-          </div>
+    </form>
 </main>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
