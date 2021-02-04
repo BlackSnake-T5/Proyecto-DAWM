@@ -31,15 +31,13 @@ export class NoticiaComponent implements OnInit {
         console.log("Error ",error)
       })
       .then( () => {
-        window.addEventListener('load', function() {
-          const queryyyString = window.location.search;
-          const urlParams = new URLSearchParams(queryyyString);
-          if (urlParams.get('tutorial') == 'true'){
-              introJs().setOption('doneLabel', 'Ir a recetas').start().oncomplete(function() {
-                  window.location.href = '/recetas?tutorial=true';
-              });
-          }
-        });
+        const queryyyString = window.location.search;
+        const urlParams = new URLSearchParams(queryyyString);
+        if (urlParams.get('tutorial') == 'true'){
+            introJs().setOption('doneLabel', 'Ir a recetas').start().oncomplete(function() {
+                window.location.href = '/recetas?tutorial=true';
+            });
+        }
     })
     
   }

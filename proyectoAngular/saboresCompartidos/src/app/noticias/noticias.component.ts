@@ -27,24 +27,26 @@ export class NoticiasComponent implements OnInit {
         console.log("Error ",error)
       })
       .then( () => {
-  
-      window.addEventListener('load', function() {
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-
-        if (urlParams.get('tutorial') == 'true'){
-            introJs().setOption('doneLabel', 'Ver noticia').start().oncomplete(function() {
-                window.location.href = '/noticia?tutorial=true';
-            });
-        }
+        this.startIntroJs()
       });
-    })
   }
+  
 
   noticiaDetails(id : string){
     this._router.navigate(['noticia'], {
       queryParams: {'id': id}
     });
+  }
+
+  startIntroJs(): void{
+    const queryStringNoticias = window.location.search;
+    const urlParams = new URLSearchParams(queryStringNoticias);
+
+    if (urlParams.get('tutorial') == 'true'){
+        introJs().setOption('doneLabel', 'Ver noticia').start().oncomplete(function() {
+            window.location.href = '/noticia?tutorial=true&id=2';
+        });
+    }
   }
 
 }

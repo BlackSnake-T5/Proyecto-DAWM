@@ -6,35 +6,28 @@
         <div class="perfil-item">
             <div class="perfil-datos">
                 <p class="perfil-item-title">Nombre Completo:</p>
-                <p>Juan Carlos García Lopez</p>
+                <p>{{profile?.full_name}}</p>
             </div>
             <span class="space"></span>
         </div>
         <div class="perfil-item">
             <div class="perfil-datos">
                 <p class="perfil-item-title">Nombre de Usuario:</p>
-                <p>jcGarLop</p>
-            </div>
-            <span class="space"></span>
-        </div>
-        <div class="perfil-item">
-            <div class="perfil-datos">
-                <p class="perfil-item-title">Contraseña:</p>
-                <p class="password">..............</p>
+                <p>{{profile?.username}}</p>
             </div>
             <span class="space"></span>
         </div>
         <div class="perfil-item">
             <div class="perfil-datos">
                 <p class="perfil-item-title">Correo Electrónico:</p>
-                <p>jcGarLop@gmail.com</p>
+                <p>{{profile?.email}}</p>
             </div>
             <span class="space"></span>
         </div>
         <div class="perfil-item">
             <div class="perfil-datos">
                 <p class="perfil-item-title">Recetas Publicadas:</p>
-                <p>12</p>
+                <p>{{recipeNumber}}</p>
             </div>
             <span class="space"></span>
         </div>
