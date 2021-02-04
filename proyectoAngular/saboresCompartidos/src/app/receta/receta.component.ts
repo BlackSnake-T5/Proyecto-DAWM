@@ -77,7 +77,7 @@ export class RecetaComponent implements OnInit {
         //imagen
         let imgCont = document.getElementById('recetaImg')
         let img = document.createElement('img')
-        img.src = "https://saborescompartidos.herokuapp.com" + jsn.response.image
+        img.src = jsn.response.image
         img.alt = jsn.response.name
         img.style.width = '100%'
         img.style.height = '100%'
