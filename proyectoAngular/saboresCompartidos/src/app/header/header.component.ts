@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { StorageService } from '../storage.service';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  public logged: boolean = false;
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router,
+              private storageService: StorageService) { }
 
   ngOnInit(): void {
+    console.log(this.storageService.getCurrentSession())
+    if (this.storageService.getCurrentSession() == null)
+      this.logged = true;
   }
 
   startTutorial(): void{
