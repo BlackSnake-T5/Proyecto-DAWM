@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import Stepper from 'bs-stepper';
 import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
+import { StorageService } from '../storage.service';
+import { Router } from '@angular/router';
+import { NuevaRecetaService } from '../nueva-receta.service';
 
 
 @Component({
@@ -9,10 +12,13 @@ import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
   styleUrls: ['./nueva-receta.component.css']
 })
 export class NuevaRecetaComponent implements OnInit {
-  constructor(private fb:FormBuilder) {}
+  constructor(private fb:FormBuilder,
+              private _router: Router,
+              private storageService: StorageService,
+              private nuevaRecetaService: NuevaRecetaService) {}
   
   productForm?: FormGroup;
-  private stepper1?: Stepper;
+  stepper1?: Stepper;
 
   next() {
     this.stepper1?.next();
@@ -20,6 +26,10 @@ export class NuevaRecetaComponent implements OnInit {
 
   onSubmit() {
     return false;
+  }
+
+  enviar(){
+    var id = this.storageService.getCurrentToken();
   }
 
   ngOnInit() {
